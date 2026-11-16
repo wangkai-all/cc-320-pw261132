@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>返利核对台 · 虚构演示</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3b3a'/%3E%3Cpath d='M16 40h10V24H16zm14 0h8V16h-8zm12 0h6V30h-6z' fill='%237fd4c4'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+  <header class="topbar">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <div>
+        <h1>返利核对台</h1>
+        <p class="sub">按供应商集团 · 品类 · 季度整段累计</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <span class="pill fiction">虚构演示 · 金额均为占位</span>
+      <div class="strategy-switch" role="group" aria-label="聚合维护策略">
+        <span class="muted">策略</span>
+        <button type="button" data-strategy="incremental">增量</button>
+        <button type="button" data-strategy="recompute">重算</button>
+      </div>
+      <button type="button" class="ghost" id="btn-consistency">一致性核对</button>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="主导航">
+    <a href="#/overview" data-nav="overview">总览</a>
+    <a href="#/segments" data-nav="segments">期间段</a>
+    <a href="#/events" data-nav="events">采购事件</a>
+    <a href="#/rules" data-nav="rules">合同与规则</a>
+    <a href="#/changes" data-nav="changes">变更追溯</a>
+    <a href="#/jobs" data-nav="jobs">重算任务</a>
+    <a href="#/settings" data-nav="settings">设置与审计</a>
+  </nav>
+
+  <main id="main" class="shell" tabindex="-1"></main>
+
+  <footer class="foot">
+    <p id="disclaimer">本应用全部为虚构演示数据与虚构金额，仅用于产品与技术演示，不构成税务、法律或会计意见。</p>
+    <p class="muted small">金额单位：人民币元；服务端以「分」做整数运算。累计口径为整段套档，非逐单相加。</p>
+  </footer>
+
+  <div id="toasts" class="toasts" aria-live="polite" aria-atomic="false"></div>
+  <dialog id="dialog" class="dialog">
+    <form method="dialog" class="dialog-head">
+      <h2 id="dialog-title">详情</h2>
+      <button class="icon-btn" value="close" aria-label="关闭">✕</button>
+    </form>
+    <div id="dialog-body" class="dialog-body"></div>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>

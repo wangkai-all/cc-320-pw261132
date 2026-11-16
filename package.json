@@ -1,0 +1,16 @@
+{
+  "name": "rebate-ledger-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "采购返利核对应用（虚构演示数据）：按供应商集团+品类+期间累计，区分试算与已确认台账",
+  "type": "commonjs",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node src/index.js",
+    "serve:clean": "node src/reset.js && node src/index.js",
+    "seed": "node src/seed.js",
+    "reset": "node src/reset.js",
+    "test": "node --test test/*.test.js",
+    "check": "node --check src/server.js"
+  }
+}
